@@ -11,7 +11,7 @@
         android:layout_height="64dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardImagem"
+            android:id="@+id/cardImgPedido"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="8dp"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imgProduto"
+                android:id="@+id/imgTipoPedido"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
@@ -35,12 +35,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_toEndOf="@id/cardImagem"
+            android:layout_toEndOf="@id/cardImgPedido"
             android:text="Nº Ped. RCA/ERP:"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="8sp"
             app:layout_constraintBottom_toTopOf="@+id/labelNumeroCliente"
-            app:layout_constraintStart_toEndOf="@+id/cardImagem"
+            app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -49,16 +49,16 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/labelNumeroPedido"
             android:layout_marginStart="8dp"
-            android:layout_toEndOf="@id/cardImagem"
+            android:layout_toEndOf="@id/cardImgPedido"
             android:text="Cliente:"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="8sp"
-            app:layout_constraintBottom_toTopOf="@+id/txtIStatusPedido"
-            app:layout_constraintStart_toEndOf="@+id/cardImagem"
+            app:layout_constraintBottom_toTopOf="@+id/txtStatusPedido"
+            app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toBottomOf="@+id/labelNumeroPedido" />
 
         <TextView
-            android:id="@+id/txtIStatusPedido"
+            android:id="@+id/txtStatusPedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -66,7 +66,7 @@
             android:textColor="@color/cor_txt_pedidos"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cardImagem"
+            app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toBottomOf="@+id/labelNumeroCliente" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:text="Crítica"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="8sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/txtIStatusPedido"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtStatusPedido"
             app:layout_constraintEnd_toStartOf="@+id/txtValor" />
 
         <ImageView

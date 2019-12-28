@@ -11,7 +11,7 @@ class Converters {
 
     @TypeConverter
     fun jsonToList(json: String): List<String>?{
-        val lista = Gson().fromJson(json, Array<String>::class.java) as Array<String>
-        return lista.toList()
+        val lista = Gson().fromJson(json, Array<String>::class.java) as? Array<String>
+        return lista?.toList()
     }
 }

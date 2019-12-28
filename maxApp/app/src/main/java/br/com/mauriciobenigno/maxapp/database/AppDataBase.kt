@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.*
 import br.com.mauriciobenigno.maxapp.models.pedido
 
-@Database(entities = [pedido::class], version = 1)
+@Database(entities = [pedido::class], version = 3)
 @TypeConverters(Converters::class)
 abstract class AppDataBase : RoomDatabase() {
 
@@ -20,7 +20,8 @@ abstract class AppDataBase : RoomDatabase() {
                     context,
                     AppDataBase::class.java,
                     "database.db"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                    .build()
 
                 INSTANCE as AppDataBase // cria nova instancia e retorna
             }

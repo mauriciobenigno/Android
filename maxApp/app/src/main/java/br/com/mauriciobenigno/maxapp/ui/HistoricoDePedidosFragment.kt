@@ -23,7 +23,9 @@ class HistoricoDePedidosFragment: Fragment(){
     override fun onResume() {
         super.onResume()
 
-        val listaMokada = listOf<pedido>(
+
+
+        /*val listaMokada = listOf<pedido>(
             pedido(1,"2","3","mau","4","5","6",null),
             pedido(1,"2","3","mau","4","5","6",null),
             pedido(1,"2","3","mau","4","5","6",null),
@@ -41,7 +43,6 @@ class HistoricoDePedidosFragment: Fragment(){
             pedido(1,"2","3","mau","4","5","6",null),
             pedido(1,"2","3","mau","4","5","6",null)
         )
-
-        recyclerViewPedidos.adapter = AdapterPedidos(listaMokada)
+        recyclerViewPedidos.adapter = AdapterPedidos(listaMokada)*/
     }
 }

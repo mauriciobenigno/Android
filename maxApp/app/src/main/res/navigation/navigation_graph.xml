@@ -8,5 +8,22 @@
         android:id="@+id/menuPrincipalFragment"
         android:name="br.com.mauriciobenigno.maxapp.ui.MenuPrincipalFragment"
         android:label="MenuPrincipalFragment"
-        tools:layout="@layout/fragment_menu_principal"/>
+        tools:layout="@layout/fragment_menu_principal">
+        <action
+            android:id="@+id/action_menuPrincipalFragment_to_dadosDoClienteFragment"
+            app:destination="@id/dadosDoClienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dadosDoClienteFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.DadosDoClienteFragment"
+        android:label="DadosDoClienteFragment"
+        tools:layout="@layout/fragment_dados_do_cliente"/>
+    <fragment
+        android:id="@+id/historicoDePedidosFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.HistoricoDePedidosFragment"
+        android:label="HistoricoDePedidosFragment" />
+    <fragment
+        android:id="@+id/alvaraFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.AlvaraFragment"
+        android:label="AlvaraFragment" />
 </navigation>

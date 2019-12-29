@@ -2,9 +2,10 @@ package br.com.mauriciobenigno.maxapp.database
 
 import android.content.Context
 import androidx.room.*
-import br.com.mauriciobenigno.maxapp.models.pedido
+import br.com.mauriciobenigno.maxapp.models.Cliente
+import br.com.mauriciobenigno.maxapp.models.Pedido
 
-@Database(entities = [pedido::class], version = 4)
+@Database(entities = [Pedido::class, Cliente::class], version = 13)
 @TypeConverters(Converters::class)
 abstract class AppDataBase : RoomDatabase() {
 

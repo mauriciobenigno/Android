@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.commons.AdapterPedidos
-import br.com.mauriciobenigno.maxapp.models.pedido
 import kotlinx.android.synthetic.main.fragment_historico__de_pedidos.*
 
 class HistoricoDePedidosFragment: Fragment(){

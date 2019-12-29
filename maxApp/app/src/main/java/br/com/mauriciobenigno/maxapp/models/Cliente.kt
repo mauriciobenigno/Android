@@ -3,6 +3,12 @@ package br.com.mauriciobenigno.maxapp.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+
+data class TempCliente (
+    @SerializedName("cliente")
+    val cliente: Cliente
+)
 
 @Entity(tableName = "clientes")
 data class Cliente (
@@ -15,8 +21,10 @@ data class Cliente (
     val razao_social: String,
     @ColumnInfo(name = "nomeFantasia")
     val nomeFantasia: String,
+    @ColumnInfo(name = "cpf")
+    val cpf: String? = null,
     @ColumnInfo(name = "cnpj")
-    val cnpj: String,
+    val cnpj: String? = null,
     @ColumnInfo(name = "ramo_atividade")
     val ramo_atividade: String,
     @ColumnInfo(name = "endereco")
@@ -24,5 +32,5 @@ data class Cliente (
     @ColumnInfo(name = "status")
     val status: String,
     @ColumnInfo(name = "contatos")
-    val contatos: List<Contato>
+    var contatos: List<Contato>?
 )

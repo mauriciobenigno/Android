@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/demo_txt_codigorazaosocial"
+                tools:text="@string/demo_txt_codigorazaosocial"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/txtNomeFantasia"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,34 +65,37 @@
 
             <TextView
                 android:id="@+id/txtNomeFantasia"
+                style="@style/TextoDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/demo_txt_nomefantasia"
-                style="@style/TextoDadosCliente"
+                tools:text="@string/demo_txt_nomefantasia"
                 android:textColor="#606060"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/labelCPF"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtCodigoRazaoSocial" />
 
             <TextView
                 android:id="@+id/labelCPF"
+                style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="CPF:"
-                style="@style/LabelDadosCliente"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/labelCNPJ"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtNomeFantasia" />
 
             <TextView
                 android:id="@+id/labelCNPJ"
+                style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="CNPJ:"
-                style="@style/LabelDadosCliente"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/labelRamoAtividade"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelCPF" />
@@ -118,6 +121,42 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRamoAtividade" />
+
+            <TextView
+                android:id="@+id/txtCPF"
+                style="@style/TextoDadosCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/labelCPF"
+                app:layout_constraintStart_toEndOf="@+id/labelCPF" />
+
+            <TextView
+                android:id="@+id/txtCNPJ"
+                style="@style/TextoDadosCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/labelCNPJ"
+                app:layout_constraintStart_toEndOf="@+id/labelCNPJ" />
+
+            <TextView
+                android:id="@+id/txtRamoAtividade"
+                style="@style/TextoDadosCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/labelRamoAtividade"
+                app:layout_constraintStart_toEndOf="@+id/labelRamoAtividade" />
+
+            <TextView
+                android:id="@+id/txtEndereco"
+                style="@style/TextoDadosCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/labelEnderecos"
+                app:layout_constraintStart_toEndOf="@+id/labelEnderecos" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

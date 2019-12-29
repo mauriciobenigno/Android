@@ -1,20 +1,18 @@
 package br.com.mauriciobenigno.maxapp.commons
 
-import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.mauriciobenigno.maxapp.R
-import br.com.mauriciobenigno.maxapp.models.pedido
+import br.com.mauriciobenigno.maxapp.models.Pedido
 import org.jetbrains.anko.backgroundColor
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AdapterPedidos(val dataSet: List<pedido>) : RecyclerView.Adapter<AdapterPedidos.ViewHolder>() {
+class AdapterPedidos(val dataSet: List<Pedido>) : RecyclerView.Adapter<AdapterPedidos.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {

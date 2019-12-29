@@ -6,7 +6,7 @@ import br.com.mauriciobenigno.maxapp.repository.AppRepository
 
 class DadosDoClienteViewModel(application: Application): AndroidViewModel(application){
 
-    /*private val appRepository = AppRepository(application)
+    private val appRepository = AppRepository(application)
 
     init {
         /* Sempre que o fragment de Dados do cliente for inicializado,
@@ -17,5 +17,5 @@ class DadosDoClienteViewModel(application: Application): AndroidViewModel(applic
     }
 
     /* Busca a lista de pedidos armazenados no banco de dados local*/
-    fun getClientInfo() = appRepository.getClientInfo()*/
+    fun getClientInfo() = appRepository.getClientInfo()
 }

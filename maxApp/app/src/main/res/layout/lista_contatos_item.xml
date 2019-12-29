@@ -11,8 +11,7 @@
         style="@style/TextoDadosCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/santral_bold"
-        android:text="LEANDRO PEREIRA DE ROSSI" />
+        android:fontFamily="@font/santral_bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +21,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/parteUmDados"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView">
 
@@ -31,7 +30,7 @@
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtCelular"
                 app:layout_constraintStart_toEndOf="@+id/txtCelular"
                 app:layout_constraintTop_toTopOf="@+id/txtCelular"
@@ -43,7 +42,7 @@
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
                 app:layout_constraintStart_toEndOf="@+id/txtTelefone"
                 app:layout_constraintTop_toTopOf="@+id/txtTelefone"
@@ -155,7 +154,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/parteDoisDados"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="TextView">
 
@@ -164,7 +163,7 @@
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
                 app:layout_constraintStart_toEndOf="@+id/txtEmail"
                 app:layout_constraintTop_toTopOf="@+id/txtEmail"
@@ -187,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:text="Data Nasc.:"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
             <TextView
                 android:id="@+id/labelDataNascConjugue"

@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.*
 import br.com.mauriciobenigno.maxapp.models.pedido
 
-@Database(entities = [pedido::class], version = 3)
+@Database(entities = [pedido::class], version = 4)
 @TypeConverters(Converters::class)
 abstract class AppDataBase : RoomDatabase() {
 

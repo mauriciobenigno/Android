@@ -26,7 +26,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
-                tools:srcCompat="@drawable/ic_maxima_em_processamento" />
+                android:visibility="gone"
+                android:background="@color/cor_status_montado"/>
+
+            <TextView
+                android:id="@+id/txtTipoPedido"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cor_status_cancelado"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="C"
+                android:visibility="gone"
+                android:textColor="@color/cor_txt_bar_ativo"
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
 
@@ -38,7 +50,7 @@
             android:layout_toEndOf="@id/cardImgPedido"
             android:text="Nº Ped. RCA/ERP:"
             android:textColor="@color/cor_txt_label_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/labelNumeroCliente"
             app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +64,7 @@
             android:layout_toEndOf="@id/cardImgPedido"
             android:text="Cliente:"
             android:textColor="@color/cor_txt_label_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/txtStatusPedido"
             app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toBottomOf="@+id/labelNumeroPedido" />
@@ -64,7 +76,7 @@
             android:layout_marginStart="8dp"
             android:text="Em processamento"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardImgPedido"
             app:layout_constraintTop_toBottomOf="@+id/labelNumeroCliente" />
@@ -76,7 +88,7 @@
             android:layout_marginStart="8dp"
             android:text=" 5.421.800.637 / 5.421.800.637"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelNumeroPedido"
             app:layout_constraintStart_toEndOf="@+id/labelNumeroPedido" />
 
@@ -87,7 +99,7 @@
             android:layout_marginStart="8dp"
             android:text=" 848.246 - A F DA SILVA TUCUMA"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelNumeroCliente"
             app:layout_constraintStart_toEndOf="@+id/labelNumeroCliente" />
 
@@ -98,15 +110,19 @@
             android:layout_marginEnd="96dp"
             android:text="Crítica"
             android:textColor="@color/cor_txt_label_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
+            android:visibility="invisible"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtStatusPedido"
-            app:layout_constraintEnd_toStartOf="@+id/txtValor" />
+            app:layout_constraintEnd_toStartOf="@+id/txtValor"
+            tools:visibility="visible" />
 
         <ImageView
             android:id="@+id/imgTipoCritica"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/labelCritica"
             app:layout_constraintTop_toBottomOf="@+id/txtNumeroCliente"
@@ -119,7 +135,7 @@
             android:layout_marginEnd="8dp"
             android:text="R$ 617,40"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelCritica"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -130,19 +146,32 @@
             android:layout_marginEnd="8dp"
             android:text="15:08"
             android:textColor="@color/cor_txt_label_pedidos"
-            android:textSize="8sp"
+            android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtNumeroPedido"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
-            android:id="@+id/imgCorte"
+            android:id="@+id/imgLegenda"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/txtValor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDataHora"
             app:srcCompat="@drawable/ic_maxima_legenda_corte" />
+
+        <!-- Barra de separação-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardImgPedido" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </LinearLayout>

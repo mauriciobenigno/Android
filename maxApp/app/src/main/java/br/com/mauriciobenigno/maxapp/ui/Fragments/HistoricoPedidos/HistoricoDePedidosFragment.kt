@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import br.com.mauriciobenigno.maxapp.R
-import br.com.mauriciobenigno.maxapp.commons.AdapterPedidos
+import br.com.mauriciobenigno.maxapp.commons.Adapters.AdapterPedidos
 import kotlinx.android.synthetic.main.fragment_historico__de_pedidos.*
 
 class HistoricoDePedidosFragment: Fragment(){
@@ -51,7 +51,10 @@ class HistoricoDePedidosFragment: Fragment(){
         * pedidos são adicionados ao banco de dados*/
         viewModel.getAllResquests().observe(this, Observer { pedidos ->
             pedidos?.let {
-                recyclerViewPedidos.adapter = AdapterPedidos(pedidos)
+                recyclerViewPedidos.adapter =
+                    AdapterPedidos(
+                        pedidos
+                    )
             }
         })
     }

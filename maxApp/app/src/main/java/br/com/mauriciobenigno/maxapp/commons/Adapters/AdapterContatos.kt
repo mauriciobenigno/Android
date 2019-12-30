@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.commons
+package br.com.mauriciobenigno.maxapp.commons.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.models.Contato
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 class AdapterContatos(val dataSet: List<Contato>) : RecyclerView.Adapter<AdapterContatos.ViewHolder>() {

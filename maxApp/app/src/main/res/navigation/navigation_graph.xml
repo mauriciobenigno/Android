@@ -3,16 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/menuPrincipalFragment">
-    <fragment
-        android:id="@+id/menuPrincipalFragment"
-        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Menu.MenuPrincipalFragment"
-        android:label="MenuPrincipalFragment"
-        tools:layout="@layout/fragment_menu_principal">
-        <action
-            android:id="@+id/action_menuPrincipalFragment_to_dadosDoClienteFragment"
-            app:destination="@id/dadosDoClienteFragment" />
-    </fragment>
+    app:startDestination="@id/dadosDoClienteFragment">
     <fragment
         android:id="@+id/dadosDoClienteFragment"
         android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Dados.DadosDoClienteFragment"

@@ -2,4 +2,6 @@
     <string name="app_name">maxApp</string>
     <string name="demo_txt_nomefantasia">DROGRARIA CAMPESTRE</string>
     <string name="demo_txt_codigorazaosocial">40.795 - A E D REMEDIOS E PERFUMARIA - EIRELI - M</string>
+    <string name="txt_nada_encontrado_pt2">Não há alvarás para exibir, verifique com o responsável pelo ERP</string>
+    <string name="txt_nada_encontrado_pt1">Nada encontrado...</string>
 </resources>

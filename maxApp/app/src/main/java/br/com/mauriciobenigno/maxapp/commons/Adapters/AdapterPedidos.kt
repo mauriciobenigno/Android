@@ -1,7 +1,5 @@
-package br.com.mauriciobenigno.maxapp.commons
+package br.com.mauriciobenigno.maxapp.commons.Adapters
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.models.Pedido
-import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.backgroundResource
 import java.text.SimpleDateFormat
 import java.util.*

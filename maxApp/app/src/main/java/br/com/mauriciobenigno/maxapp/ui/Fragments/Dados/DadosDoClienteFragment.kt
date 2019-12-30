@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.mauriciobenigno.maxapp.R
-import br.com.mauriciobenigno.maxapp.commons.AdapterContatos
+import br.com.mauriciobenigno.maxapp.commons.Adapters.AdapterContatos
 import br.com.mauriciobenigno.maxapp.models.Cliente
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*
@@ -52,7 +52,10 @@ class DadosDoClienteFragment: Fragment(){
                 txtEndereco.text = it.endereco
 
                 it.contatos?.let { lista ->
-                    recyclerViewContatos.adapter = AdapterContatos(lista)
+                    recyclerViewContatos.adapter =
+                        AdapterContatos(
+                            lista
+                        )
                 }
             }
         })

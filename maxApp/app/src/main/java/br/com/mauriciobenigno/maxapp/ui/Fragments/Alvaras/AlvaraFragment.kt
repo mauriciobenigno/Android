@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.Alvara
+package br.com.mauriciobenigno.maxapp.ui.Fragments.Alvaras
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +14,7 @@ class AlvaraFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity!!.setTitle(R.string.screen_alvaras)
         return inflater.inflate(R.layout.fragment_alvaras, container, false)
     }
 }

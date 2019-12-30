@@ -2,6 +2,7 @@ package br.com.mauriciobenigno.maxapp.ui.Fragments.HistoricoPedidos
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.fragment.app.Fragment
@@ -18,13 +19,13 @@ class HistoricoDePedidosFragment: Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         setHasOptionsMenu(true)
+        activity!!.setTitle(R.string.screen_historicopedidos)
         return inflater.inflate(R.layout.fragment_historico__de_pedidos, container, false)
     }
 
     @SuppressLint("RestrictedApi")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.historico_pedidos_menu,menu)
-
         /* Para tornar o icone do menu visivel. Solução proposta por: Mena
         * em https://stackoverflow.com/questions/55826607/actionbar-menus-item-icons-not-shown-properly-upon-rtl */
         if (menu is MenuBuilder) { //To display icon on overflow menu

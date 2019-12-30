@@ -6,9 +6,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import br.com.mauriciobenigno.maxapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 

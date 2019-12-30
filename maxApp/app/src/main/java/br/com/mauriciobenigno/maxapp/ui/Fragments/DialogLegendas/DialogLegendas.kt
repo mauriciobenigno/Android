@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.Dialog
+package br.com.mauriciobenigno.maxapp.ui.Fragments.DialogLegendas
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
-import androidx.fragment.app.DialogFragment
 import br.com.mauriciobenigno.maxapp.R
 import org.jetbrains.anko.layoutInflater
 

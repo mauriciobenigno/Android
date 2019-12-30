@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">maxApp</string>
+    <string name="screen_dadoscliente">Dados do cliente</string>
+    <string name="screen_historicopedidos">Hist. de Pedidos</string>
+    <string name="screen_alvaras">Alvarás</string>
     <string name="demo_txt_nomefantasia">DROGRARIA CAMPESTRE</string>
     <string name="demo_txt_codigorazaosocial">40.795 - A E D REMEDIOS E PERFUMARIA - EIRELI - M</string>
     <string name="txt_nada_encontrado_pt2">Não há alvarás para exibir, verifique com o responsável pelo ERP</string>

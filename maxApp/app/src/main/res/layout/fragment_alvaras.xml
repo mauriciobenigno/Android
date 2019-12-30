@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
 
     <ImageView
         android:id="@+id/imgSemResultados"
-        android:layout_width="239dp"
-        android:layout_height="248dp"
+        android:layout_width="184dp"
+        android:layout_height="199dp"
         android:layout_marginTop="138dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,9 @@
         android:text="@string/txt_nada_encontrado_pt2"
         android:textColor="@color/cor_txt_cliente"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelRespostaMaior" />
+        app:layout_constraintTop_toBottomOf="@+id/labelRespostaMaior"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

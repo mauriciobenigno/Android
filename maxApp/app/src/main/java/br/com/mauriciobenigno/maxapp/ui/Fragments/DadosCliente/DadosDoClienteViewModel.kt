@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.Dados
+package br.com.mauriciobenigno.maxapp.ui.Fragments.DadosCliente
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

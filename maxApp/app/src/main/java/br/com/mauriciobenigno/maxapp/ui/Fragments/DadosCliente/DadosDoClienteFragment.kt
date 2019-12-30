@@ -1,5 +1,6 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.Dados
+package br.com.mauriciobenigno.maxapp.ui.Fragments.DadosCliente
 
+import android.app.ActionBar
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,7 +25,7 @@ class DadosDoClienteFragment: Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        //toolbar.setBackgroundColor(R.color.colorAccent)
+        activity!!.setTitle(R.string.screen_dadoscliente)
         return inflater.inflate(R.layout.fragment_dados_do_cliente, container, false)
     }
 

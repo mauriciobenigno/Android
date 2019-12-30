@@ -6,7 +6,7 @@
     app:startDestination="@id/menuPrincipalFragment">
     <fragment
         android:id="@+id/menuPrincipalFragment"
-        android:name="br.com.mauriciobenigno.maxapp.ui.MenuPrincipalFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Menu.MenuPrincipalFragment"
         android:label="MenuPrincipalFragment"
         tools:layout="@layout/fragment_menu_principal">
         <action
@@ -15,12 +15,12 @@
     </fragment>
     <fragment
         android:id="@+id/dadosDoClienteFragment"
-        android:name="br.com.mauriciobenigno.maxapp.ui.DadosDoClienteFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Dados.DadosDoClienteFragment"
         android:label="DadosDoClienteFragment"
         tools:layout="@layout/fragment_dados_do_cliente"/>
     <fragment
         android:id="@+id/historicoDePedidosFragment"
-        android:name="br.com.mauriciobenigno.maxapp.ui.HistoricoDePedidosFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.HistoricoPedidos.HistoricoDePedidosFragment"
         android:label="HistoricoDePedidosFragment" >
         <action
             android:id="@+id/action_historicoDePedidosFragment_to_dialogLegendas"
@@ -28,10 +28,10 @@
     </fragment>
     <fragment
         android:id="@+id/alvaraFragment"
-        android:name="br.com.mauriciobenigno.maxapp.ui.AlvaraFragment"
+        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Alvara.AlvaraFragment"
         android:label="AlvaraFragment" />
     <dialog
         android:id="@+id/dialogLegendas"
-        android:name="br.com.mauriciobenigno.maxapp.ui.DialogLegendas"
+        android:name="br.com.mauriciobenigno.maxapp.ui.Fragments.Dialog.DialogLegendas"
         android:label="DialogLegendas" />
 </navigation>

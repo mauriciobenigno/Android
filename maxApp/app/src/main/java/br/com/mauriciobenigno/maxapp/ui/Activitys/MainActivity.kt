@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui
+package br.com.mauriciobenigno.maxapp.ui.Activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,8 +12,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val navigationHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment?
-        NavigationUI.setupWithNavController(bottom_nav, navigationHostFragment!!.navController)
     }
 }

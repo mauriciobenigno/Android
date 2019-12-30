@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui
+package br.com.mauriciobenigno.maxapp.ui.Fragments.HistoricoPedidos
 
 import android.annotation.SuppressLint
 import android.os.Bundle

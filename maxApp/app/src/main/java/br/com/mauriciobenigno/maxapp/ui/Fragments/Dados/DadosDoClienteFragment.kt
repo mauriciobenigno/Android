@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui
+package br.com.mauriciobenigno.maxapp.ui.Fragments.Dados
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,18 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.commons.AdapterContatos
 import br.com.mauriciobenigno.maxapp.models.Cliente
-import br.com.mauriciobenigno.maxapp.models.Contato
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*
-import org.jetbrains.anko.doAsync
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui
+package br.com.mauriciobenigno.maxapp.ui.Fragments.Alvara
 
 import android.os.Bundle
 import android.view.LayoutInflater

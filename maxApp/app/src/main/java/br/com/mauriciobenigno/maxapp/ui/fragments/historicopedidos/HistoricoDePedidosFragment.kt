@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.commons.adapters.AdapterPedidos
-import kotlinx.android.synthetic.main.fragment_historico__de_pedidos.*
+import kotlinx.android.synthetic.main.fragment_historico_de_pedidos.*
 
 class HistoricoDePedidosFragment: Fragment(){
 
@@ -19,7 +19,7 @@ class HistoricoDePedidosFragment: Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         setHasOptionsMenu(true)
         activity!!.setTitle(R.string.screen_historicopedidos)
-        return inflater.inflate(R.layout.fragment_historico__de_pedidos, container, false)
+        return inflater.inflate(R.layout.fragment_historico_de_pedidos, container, false)
     }
 
     @SuppressLint("RestrictedApi")

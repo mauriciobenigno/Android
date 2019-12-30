@@ -35,7 +35,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/santral_bold"
-                android:text="Dados do cliente"
+                android:text="@string/txt_label_cliente"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="CPF:"
+                android:text="@string/label_txt_cpf"
                 android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/labelCNPJ"
                 app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="CNPJ:"
+                android:text="@string/label_txt_cnpj"
                 android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/labelRamoAtividade"
                 app:layout_constraintStart_toStartOf="parent"
@@ -102,22 +102,22 @@
 
             <TextView
                 android:id="@+id/labelRamoAtividade"
+                style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Ramo de atividade:"
-                style="@style/LabelDadosCliente"
+                android:text="@string/label_txt_ramo_atividade"
                 app:layout_constraintBottom_toTopOf="@+id/labelEnderecos"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelCNPJ" />
 
             <TextView
                 android:id="@+id/labelEnderecos"
+                style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Endereços:"
-                style="@style/LabelDadosCliente"
+                android:text="@string/label_txt_enderecos"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelRamoAtividade" />
@@ -172,7 +172,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardContatos"
@@ -203,7 +203,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
                         android:fontFamily="@font/santral_bold"
-                        android:text="Contatos"
+                        android:text="@string/label_txt_contatos"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -247,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Verificar Status do Cliente"
+                android:text="@string/label_btn_status_cliente"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:textColorLink="#638735"

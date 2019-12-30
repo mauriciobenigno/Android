@@ -17,6 +17,6 @@ class SplashScreenActivity : AppCompatActivity() {
                 this.startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
-        },3000)
+        },3000) // 3 segundos de Splash
     }
 }

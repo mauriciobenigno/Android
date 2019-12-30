@@ -26,8 +26,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
-                android:visibility="gone"
-                android:background="@color/cor_status_montado"/>
+                android:background="@color/cor_status_montado"
+                android:contentDescription="@string/txt_img_pedido"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/txtTipoPedido"
@@ -48,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/cardImgPedido"
-            android:text="Nº Ped. RCA/ERP:"
+            android:text="@string/txt_label_num_ped"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/labelNumeroCliente"
@@ -62,7 +63,7 @@
             android:layout_below="@id/labelNumeroPedido"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/cardImgPedido"
-            android:text="Cliente:"
+            android:text="@string/txt_label_cliente"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/txtStatusPedido"
@@ -74,7 +75,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Em processamento"
             android:textColor="@color/cor_txt_pedidos"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +86,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text=" 5.421.800.637 / 5.421.800.637"
             android:textColor="@color/cor_txt_pedidos"
             android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelNumeroPedido"
@@ -97,7 +96,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text=" 848.246 - A F DA SILVA TUCUMA"
             android:textColor="@color/cor_txt_pedidos"
             android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelNumeroCliente"
@@ -121,19 +119,20 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="8dp"
+            android:contentDescription="@string/txt_img_pedido"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/labelCritica"
             app:layout_constraintTop_toBottomOf="@+id/txtNumeroCliente"
-            app:srcCompat="@drawable/ic_maxima_critica_sucesso" />
+            app:srcCompat="@drawable/ic_maxima_critica_sucesso"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/txtValor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="R$ 617,40"
+            android:text="@string/txt_valor_exemplo"
             android:textColor="@color/cor_txt_pedidos"
             android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/labelCritica"
@@ -144,7 +143,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="15:08"
             android:textColor="@color/cor_txt_label_pedidos"
             android:textSize="10sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtNumeroPedido"
@@ -155,12 +153,13 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginEnd="8dp"
+            android:contentDescription="@string/txt_img_pedido"
             android:visibility="invisible"
-            tools:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/txtValor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDataHora"
-            app:srcCompat="@drawable/ic_maxima_legenda_corte" />
+            app:srcCompat="@drawable/ic_maxima_legenda_corte"
+            tools:visibility="visible" />
 
         <!-- Barra de separação-->
         <View

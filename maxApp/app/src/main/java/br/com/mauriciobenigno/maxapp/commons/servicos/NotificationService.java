@@ -7,7 +7,13 @@ import android.util.Log;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* Adaptado por Mauricio Benigno, solução proposta por Smita Kapse
+/* Adaptado por Mauricio Benigno,
+ Obs: Não está funcionando bem, o SO mata o serviço quase um minuto após sua inicialização.
+ Também foi feito uma tentativa de usar Broadcast para tentar executar a tarefa ou reiniciar
+ o serviço, mas ambas sem sucesso. Não consegui identificar o motivo para que o app não captasse
+ o broadcast.
+
+ Solução abaixo proposta por Smita Kapse
  * em https://www.tutorialspoint.com/send-a-notification-when-the-android-app-is-closed*/
 
 public class NotificationService extends Service {
@@ -29,14 +35,17 @@ public class NotificationService extends Service {
     @Override
     public void onDestroy () {
         stopTimerTask();
+        Log. e ( TAG , " Task Finish" ) ;
         super .onDestroy();
     }
+
+
 
     final Handler handler = new Handler();
     public void startTimer (){
         timer = new Timer();
         initializeTimerTask();
-        timer .schedule( timerTask , 300000 , 28800000 ) ; // A cada 5 minutos, durante 8 horas
+        timer .schedule( timerTask , 300000 , 300000 ) ; // A cada 5 minutos, durante 8 horas
     }
     public void stopTimerTask () {
         if (timer != null) {
@@ -44,6 +53,7 @@ public class NotificationService extends Service {
             timer = null;
         }
     }
+
     public void initializeTimerTask(){
         timerTask = new TimerTask(){
             public void run(){

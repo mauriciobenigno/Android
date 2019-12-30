@@ -19,9 +19,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/santral_regular"
-            android:text="Status do pedido no ERP"
+            android:text="@string/txt_status_pedido_erp"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/labelTituloLegendas" />
 
@@ -51,9 +51,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_em_orcamento"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="B"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -75,9 +75,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_cancelado"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="C"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -99,9 +99,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_faturado"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="F"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -123,9 +123,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_montado"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="M"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -147,9 +147,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_liberado"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="L"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -171,9 +171,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_bloqueado"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="B"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -195,9 +195,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_pendente"
                     android:gravity="center_horizontal|center_vertical"
-                    android:text="P"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -219,9 +219,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/cor_status_recusado"
                     android:gravity="center"
-                    android:text="!"
+                    android:text="@string/txt_letra_teste"
                     android:textColor="@color/cor_txt_bar_ativo"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:visibility="visible" />
             </androidx.cardview.widget.CardView>
@@ -242,8 +242,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/cor_status_em_processamento"
-                    android:src="@drawable/ic_maxima_em_processamento">
-                </ImageView>
+                    android:contentDescription="@string/txt_img_iconlegenda"
+                    android:src="@drawable/ic_maxima_em_processamento"></ImageView>
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -251,9 +251,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Orçamento"
+                android:text="@string/txt_legenda_orcamento"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus9"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus9"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus9" />
@@ -263,9 +263,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Cancelado"
+                android:text="@string/txt_legenda_cancelado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus8"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus8"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus8" />
@@ -275,9 +275,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Faturado"
+                android:text="@string/txt_legenda_faturado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus7"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus7"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus7" />
@@ -287,9 +287,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Montado"
+                android:text="@string/txt_legenda_montado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus6"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus6"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus6" />
@@ -299,9 +299,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Liberado"
+                android:text="@string/txt_legenda_liberado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus5"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus5"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus5" />
@@ -311,9 +311,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Bloqueado"
+                android:text="@string/txt_legenda_bloqueado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus4"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus4"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus4" />
@@ -323,9 +323,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Posição no ERP Pendente"
+                android:text="@string/txt_posicao_pendente"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus3"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus3"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus3" />
@@ -335,9 +335,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido recusado pelo ERP"
+                android:text="@string/txt_legenda_recusado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus2"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus2"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus2" />
@@ -347,9 +347,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Em processamento por parte do FV"
+                android:text="@string/txt_legenda_processamento"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgStatus1"
                 app:layout_constraintStart_toEndOf="@+id/imgStatus1"
                 app:layout_constraintTop_toTopOf="@+id/imgStatus1" />
@@ -363,9 +363,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/santral_regular"
-            android:text="Crítica"
+            android:text="@string/label_legenda_critica"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayoutStatus" />
 
@@ -386,10 +386,11 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_cancelamento"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgCritica3"/>
+                app:layout_constraintTop_toBottomOf="@+id/imgCritica3" />
                 <!-- Por conta da falta do icone, coloquei o de
                 cancelamento no lugar-->
 
@@ -400,6 +401,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_critica_alerta"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -411,6 +413,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_critica_sucesso"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -422,6 +425,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_aguardando_critica"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -432,9 +436,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Falha total"
+                android:text="@string/txt_legenda_falhatotal"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgCritica4"
                 app:layout_constraintStart_toEndOf="@+id/imgCritica4"
                 app:layout_constraintTop_toTopOf="@+id/imgCritica4" />
@@ -444,9 +448,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Falha parcial"
+                android:text="@string/txt_legenda_falha_parcial"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgCritica3"
                 app:layout_constraintStart_toEndOf="@+id/imgCritica3"
                 app:layout_constraintTop_toTopOf="@+id/imgCritica3" />
@@ -456,9 +460,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Sucesso"
+                android:text="@string/txt_legenda_sucesso"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgCritica2"
                 app:layout_constraintStart_toEndOf="@+id/imgCritica2"
                 app:layout_constraintTop_toTopOf="@+id/imgCritica2" />
@@ -468,9 +472,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Aguardando retorno do ERP"
+                android:text="@string/txt_legenda_retorno"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgCritica1"
                 app:layout_constraintStart_toEndOf="@+id/imgCritica1"
                 app:layout_constraintTop_toTopOf="@+id/imgCritica1" />
@@ -484,9 +488,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/santral_regular"
-            android:text="Legendas"
+            android:text="@string/txt_label_legendas"
             android:textColor="@color/cor_txt_pedidos"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayoutCritica" />
 
@@ -497,7 +501,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/santral_bold"
-            android:text="Legendas"
+            android:text="@string/txt_label_legendas"
             android:textColor="@color/cor_txt_pedidos"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -517,6 +521,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_telemarketing"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -528,6 +533,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_devolucao"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -539,6 +545,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_cancelamento"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -550,6 +557,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_falta"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -561,6 +569,7 @@
                 android:layout_height="16dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_critica"
                 android:src="@drawable/ic_maxima_legenda_corte"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
@@ -571,9 +580,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido feito pelo Telemarketing"
+                android:text="@string/txt_label_telemarketing"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLegenda5"
                 app:layout_constraintStart_toEndOf="@+id/imgLegenda5"
                 app:layout_constraintTop_toTopOf="@+id/imgLegenda5" />
@@ -583,9 +592,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido com devolução"
+                android:text="@string/txt_label_devolucao"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLegenda4"
                 app:layout_constraintStart_toEndOf="@+id/imgLegenda4"
                 app:layout_constraintTop_toBottomOf="@+id/imgLegenda3" />
@@ -595,9 +604,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido cancelado no ERP"
+                android:text="@string/txt_label_pedido_cancelado"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLegenda3"
                 app:layout_constraintStart_toEndOf="@+id/imgLegenda3"
                 app:layout_constraintTop_toTopOf="@+id/imgLegenda3" />
@@ -607,9 +616,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido com falta"
+                android:text="@string/txt_pedido_falta"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLegenda2"
                 app:layout_constraintStart_toEndOf="@+id/imgLegenda2"
                 app:layout_constraintTop_toTopOf="@+id/imgLegenda2" />
@@ -619,9 +628,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Pedido sofreu corte"
+                android:text="@string/txt_label_pedido_corte"
                 android:textColor="#000000"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgLegenda1"
                 app:layout_constraintStart_toEndOf="@+id/imgLegenda1"
                 app:layout_constraintTop_toTopOf="@+id/imgLegenda1" />

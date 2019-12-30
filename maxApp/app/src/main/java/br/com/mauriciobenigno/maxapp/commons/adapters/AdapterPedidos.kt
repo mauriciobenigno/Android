@@ -113,13 +113,16 @@ class AdapterPedidos(val dataSet: List<Pedido>) : RecyclerView.Adapter<AdapterPe
             holder.textoTipoPedido.visibility = View.VISIBLE
             when(pedidoAtual.status.toLowerCase()){
                 "pendente" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_pendente
-                "recusado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_recusado
                 "bloqueado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_bloqueado
                 "liberado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_liberado
                 "montado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_montado
                 "faturado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_faturado
                 "cancelado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_cancelado
                 "em orçamento" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_em_orcamento
+                "recusado" -> {
+                    holder.textoTipoPedido.backgroundResource = R.color.cor_status_recusado
+                    holder.textoTipoPedido.text = "!"
+                }
                 /* Na documentação não especifica a cor do produto processado, nesse caso pra ter diferenciação
                 * entre processados e pendentes na api de testes, estou colocando a mesma cor de liberado*/
                 else -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_liberado

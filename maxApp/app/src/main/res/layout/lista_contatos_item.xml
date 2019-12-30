@@ -16,20 +16,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/parteUmDados"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="TextView">
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/imgCelular"
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_contato"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtCelular"
                 app:layout_constraintStart_toEndOf="@+id/txtCelular"
@@ -42,6 +43,7 @@
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_contato"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtTelefone"
                 app:layout_constraintStart_toEndOf="@+id/txtTelefone"
@@ -54,7 +56,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Telefone:"
+                android:text="@string/txt_label_telefone"
                 app:layout_constraintBottom_toTopOf="@+id/labelContatoCelular"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +66,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Celular:"
+                android:text="@string/txt_label_celular"
                 app:layout_constraintBottom_toTopOf="@+id/labelConjugue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelContatoTelefone" />
@@ -74,7 +76,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cônjugue:"
+                android:text="@string/txt_label_conjugue"
                 app:layout_constraintBottom_toTopOf="@+id/labelContatoTipo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelContatoCelular" />
@@ -84,7 +86,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tipo:"
+                android:text="@string/txt_label_tipo"
                 app:layout_constraintBottom_toTopOf="@+id/labelHobbie"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelConjugue" />
@@ -94,7 +96,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hobbie"
+                android:text="@string/txt_label_hobbie"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelContatoTipo" />
@@ -105,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não Informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelContatoTelefone"
                 app:layout_constraintStart_toEndOf="@+id/labelContatoTelefone" />
 
@@ -115,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não Informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelContatoCelular"
                 app:layout_constraintStart_toEndOf="@+id/labelContatoCelular" />
 
@@ -125,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não Informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelConjugue"
                 app:layout_constraintStart_toEndOf="@+id/labelConjugue" />
 
@@ -135,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não Informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelContatoTipo"
                 app:layout_constraintStart_toEndOf="@+id/labelContatoTipo" />
 
@@ -145,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não Informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelHobbie"
                 app:layout_constraintStart_toEndOf="@+id/labelHobbie" />
 
@@ -155,14 +157,14 @@
             android:id="@+id/parteDoisDados"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="TextView">
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/imgEmail"
                 android:layout_width="16dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/txt_img_contato"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
                 app:layout_constraintStart_toEndOf="@+id/txtEmail"
@@ -175,7 +177,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-mail:"
+                android:text="@string/txt_label_email"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -184,7 +186,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data Nasc.:"
+                android:text="@string/txt_label_nasc"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
@@ -193,7 +195,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data Nasc. Cônjugue:"
+                android:text="@string/txt_label_nasc_conjugue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDataNasc" />
 
@@ -202,7 +204,7 @@
                 style="@style/LabelDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time:"
+                android:text="@string/txt_label_time"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelDataNascConjugue" />
 
@@ -212,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelEmail"
                 app:layout_constraintStart_toEndOf="@+id/labelEmail" />
 
@@ -221,7 +223,7 @@
                 style="@style/TextoDadosCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Não informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelDataNasc"
                 app:layout_constraintStart_toEndOf="@+id/labelDataNasc" />
 
@@ -231,7 +233,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="Não informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelDataNascConjugue"
                 app:layout_constraintStart_toEndOf="@+id/labelDataNascConjugue" />
 
@@ -241,7 +243,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Não informado"
+                android:text="@string/txt_nao_informado"
                 app:layout_constraintBaseline_toBaselineOf="@+id/labelTime"
                 app:layout_constraintStart_toEndOf="@+id/labelTime" />
         </androidx.constraintlayout.widget.ConstraintLayout>

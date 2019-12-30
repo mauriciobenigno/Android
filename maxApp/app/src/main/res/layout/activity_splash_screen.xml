@@ -13,6 +13,7 @@
         android:layout_width="123dp"
         android:layout_height="126dp"
         android:layout_gravity="center_horizontal|center_vertical"
+        android:contentDescription="@string/txt_content_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

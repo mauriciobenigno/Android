@@ -12,6 +12,7 @@
         android:layout_width="184dp"
         android:layout_height="199dp"
         android:layout_marginTop="138dp"
+        android:contentDescription="@string/txt_content_sem_alvara"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -2,6 +2,7 @@ package br.com.mauriciobenigno.maxapp.repository
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import br.com.mauriciobenigno.maxapp.api.ApiService
 import br.com.mauriciobenigno.maxapp.database.AppDataBase
 import br.com.mauriciobenigno.maxapp.models.*
@@ -22,13 +23,15 @@ class AppRepository(val context: Context) {
         val request = ApiService.getEndPoints()
         request.getClientInfo().enqueue(object : Callback<TempCliente>{
             override fun onFailure(call: Call<TempCliente>, t: Throwable) {
-                Log.e("Falha", " Requisição de cliente falhou. Cod: "+t.message)
+                /*Toast.makeText(context,"Não foi possível verificar as atualizações do cliente!",
+                    Toast.LENGTH_SHORT).show()*/
             }
 
             override fun onResponse(call: Call<TempCliente>, response: Response<TempCliente>) {
                 if (response.code() == 200)
                 {
-                    Log.d("Sucesso", " Requisição de cliente foi feita com sucesso!")
+                    Toast.makeText(context,"Dados cliente atualizados!",
+                        Toast.LENGTH_SHORT).show()
                     val resultado = response.body()
                     resultado?.let { temp ->
                         doAsync {
@@ -45,11 +48,13 @@ class AppRepository(val context: Context) {
         val request = ApiService.getEndPoints()
         request.getAllRequests().enqueue(object : Callback<TempPedidos>{
             override fun onFailure(call: Call<TempPedidos>, t: Throwable) {
-                //Log.e("Falha", " Requisição de pedidos falhou. Cod: "+t.message)
+                /*Toast.makeText(context,"Não foi possível verificar se a novos pedidos, tente novamente!",
+                    Toast.LENGTH_SHORT).show()*/
             }
 
             override fun onResponse(call: Call<TempPedidos>, response: Response<TempPedidos>) {
-                //Log.d("Sucesso", " Requisição de Pedidos foi feita com sucesso!")
+                Toast.makeText(context,"Histórico de pedidos atualizado!",
+                    Toast.LENGTH_SHORT).show()
                 if (response.code() == 200)
                 {
                     val resultado = response.body()
@@ -61,7 +66,6 @@ class AppRepository(val context: Context) {
                             }
                         }
                     }
-
                 }
             }
         })

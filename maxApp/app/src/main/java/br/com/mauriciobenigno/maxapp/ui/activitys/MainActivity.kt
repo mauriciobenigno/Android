@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
         verificarInternet(this)
-        //Notification.createNotification(this, "Volte para o MaxApp", "Toque para abrir", true)
-
         stopService(Intent(this,NotificationService::class.java))
     }
 

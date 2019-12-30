@@ -21,5 +21,6 @@
     <color name="cor_fundo_card">#FFFFFF</color>
     <color name="cor_txt_label_cliente">#95989A</color>
     <color name="cor_txt_cliente">#000000</color>
+    <color name="cor_txt_alvara">#3E3E3E</color>
 
 </resources>

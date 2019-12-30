@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.com.mauriciobenigno.maxapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,8 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".ui.Activitys.SplashScreenActivity"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.activitys.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +25,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Activitys.WorkActivity"
-            android:parentActivityName=".ui.Activitys.MainActivity"/>
-        <activity android:name=".ui.Activitys.MainActivity" />
+        <activity
+            android:name=".ui.activitys.WorkActivity"
+            android:parentActivityName=".ui.activitys.MainActivity" />
+        <activity android:name=".ui.activitys.MainActivity" />
+
+        <service
+            android:name = ".commons.servicos.NotificationService"
+            android:label = "@string/app_name" >
+            <intent-filter>
+                <action
+                    android:name = ".commons.servicos.NotificationService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

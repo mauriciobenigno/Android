@@ -1,8 +1,7 @@
-package br.com.mauriciobenigno.maxapp.ui.Activitys
+package br.com.mauriciobenigno.maxapp.ui.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import br.com.mauriciobenigno.maxapp.R

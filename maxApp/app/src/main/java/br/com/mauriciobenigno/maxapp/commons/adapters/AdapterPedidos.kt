@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.commons.Adapters
+package br.com.mauriciobenigno.maxapp.commons.adapters
 
 import android.view.LayoutInflater
 import android.view.View

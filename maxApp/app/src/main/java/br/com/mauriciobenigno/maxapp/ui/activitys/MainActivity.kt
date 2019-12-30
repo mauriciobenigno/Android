@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Activitys
+package br.com.mauriciobenigno.maxapp.ui.activitys
 
 import android.content.Context
 import android.content.Intent
@@ -7,9 +7,12 @@ import android.net.NetworkInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.mauriciobenigno.maxapp.R
+import br.com.mauriciobenigno.maxapp.commons.servicos.NotificationService
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,12 +23,20 @@ class MainActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
         verificarInternet(this)
+        //Notification.createNotification(this, "Volte para o MaxApp", "Toque para abrir", true)
+
+        stopService(Intent(this,NotificationService::class.java))
     }
 
     override fun onResume() {
         super.onResume()
         verificarInternet(this)
+        stopService(Intent(this,NotificationService::class.java))
+    }
 
+    override fun onStop() {
+        super.onStop()
+        startService(Intent(this,NotificationService::class.java))
     }
 
     fun verificarInternet(context: Context){
@@ -43,4 +54,5 @@ class MainActivity : AppCompatActivity() {
         val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
         return return isConnected
     }
+
 }

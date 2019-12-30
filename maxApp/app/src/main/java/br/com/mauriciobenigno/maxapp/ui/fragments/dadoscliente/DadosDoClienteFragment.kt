@@ -1,6 +1,5 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.DadosCliente
+package br.com.mauriciobenigno.maxapp.ui.fragments.dadoscliente
 
-import android.app.ActionBar
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.mauriciobenigno.maxapp.R
-import br.com.mauriciobenigno.maxapp.commons.Adapters.AdapterContatos
+import br.com.mauriciobenigno.maxapp.commons.adapters.AdapterContatos
 import br.com.mauriciobenigno.maxapp.models.Cliente
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*

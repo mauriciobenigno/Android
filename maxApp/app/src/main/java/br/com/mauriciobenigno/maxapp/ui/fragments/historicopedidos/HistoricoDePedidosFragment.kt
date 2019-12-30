@@ -1,8 +1,7 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.HistoricoPedidos
+package br.com.mauriciobenigno.maxapp.ui.fragments.historicopedidos
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.fragment.app.Fragment
@@ -10,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import br.com.mauriciobenigno.maxapp.R
-import br.com.mauriciobenigno.maxapp.commons.Adapters.AdapterPedidos
+import br.com.mauriciobenigno.maxapp.commons.adapters.AdapterPedidos
 import kotlinx.android.synthetic.main.fragment_historico__de_pedidos.*
 
 class HistoricoDePedidosFragment: Fragment(){

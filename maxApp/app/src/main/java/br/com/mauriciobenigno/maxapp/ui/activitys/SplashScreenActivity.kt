@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Activitys
+package br.com.mauriciobenigno.maxapp.ui.activitys
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

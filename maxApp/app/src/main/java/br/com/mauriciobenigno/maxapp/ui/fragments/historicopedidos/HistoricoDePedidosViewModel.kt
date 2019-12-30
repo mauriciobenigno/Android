@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.HistoricoPedidos
+package br.com.mauriciobenigno.maxapp.ui.fragments.historicopedidos
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

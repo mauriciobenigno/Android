@@ -1,4 +1,4 @@
-package br.com.mauriciobenigno.maxapp.ui.Fragments.DialogLegendas
+package br.com.mauriciobenigno.maxapp.ui.fragments.dialoglegendas
 
 import android.app.AlertDialog
 import android.app.Dialog

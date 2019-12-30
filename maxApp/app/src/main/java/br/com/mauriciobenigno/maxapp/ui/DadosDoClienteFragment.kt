@@ -12,15 +12,19 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.commons.AdapterContatos
+import br.com.mauriciobenigno.maxapp.models.Cliente
 import br.com.mauriciobenigno.maxapp.models.Contato
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_dados_do_cliente.*
 import org.jetbrains.anko.doAsync
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DadosDoClienteFragment: Fragment(){
 
     lateinit var viewModel : DadosDoClienteViewModel
+    lateinit var cliente: Cliente
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -35,6 +39,7 @@ class DadosDoClienteFragment: Fragment(){
 
         viewModel.getClientInfo().observe(this, Observer {
             it?.let {
+                cliente = it
                 txtCodigoRazaoSocial.text = "${it.id} - ${it.razao_social}"
                 txtNomeFantasia.text = it.nomeFantasia
                 it.cpf?.let {
@@ -57,18 +62,23 @@ class DadosDoClienteFragment: Fragment(){
         })
 
         btnVerificarStatus.setOnClickListener{
+            // Se o cliente já tiver sido inicializado (já tiver dados), então o snack funcionará
+            if(::cliente.isInitialized){
+                // Como não sei de que data se trata a da imagem, resolvi colocar a do dia
+                val status =  "${SimpleDateFormat("dd/MM/YYYY").format(Date())} - ${cliente.status}"
+                val snack = Snackbar.make(it,status, Snackbar.LENGTH_SHORT).setAction("FECHAR"){}
+                /* Solução proposta por Morozov em 'https://stackoverflow.com/questions/58749519/move-snackbar-above-the-bottomnavigationview'
+                * Essa solução faz com que a snackbar não sobreponha o bottom navigation
+                * Tal solução consiste em pegar a snack criada, e posicionar ela em uma posição que não
+                * sobrepõe a nav, com base no valor de dimen setado para ela*/
+                val params = snack.view.layoutParams as FrameLayout.LayoutParams
+                params.setMargins(0, 0, 0, this.resources.getDimension(R.dimen.bottom_bar_size).toInt())
+                snack.view.layoutParams = params
+                // alterando a cor do "Fechar'
+                snack.setActionTextColor(Color.parseColor("#638735"))
+                snack.show()
+            }
 
-            val snack = Snackbar.make(it,"TESTE", Snackbar.LENGTH_SHORT).setAction("FECHAR"){}
-            /* Solução proposta por Morozov em 'https://stackoverflow.com/questions/58749519/move-snackbar-above-the-bottomnavigationview'
-            * Essa solução faz com que a snackbar não sobreponha o bottom navigation
-            * Tal solução consiste em pegar a snack criada, e posicionar ela em uma posição que não
-            * sobrepõe a nav, com base no valor de dimen setado para ela*/
-            val params = snack.view.layoutParams as FrameLayout.LayoutParams
-            params.setMargins(0, 0, 0, this.resources.getDimension(R.dimen.bottom_bar_size).toInt())
-            snack.view.layoutParams = params
-            // alterando a cor do "Fechar'
-            snack.setActionTextColor(Color.parseColor("#638735"))
-            snack.show()
         }
 
 

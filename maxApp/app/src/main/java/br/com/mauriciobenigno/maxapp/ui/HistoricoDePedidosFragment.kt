@@ -1,12 +1,13 @@
 package br.com.mauriciobenigno.maxapp.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.appcompat.view.menu.MenuBuilder
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.commons.AdapterPedidos
 import kotlinx.android.synthetic.main.fragment_historico__de_pedidos.*
@@ -16,7 +17,29 @@ class HistoricoDePedidosFragment: Fragment(){
     lateinit var viewModel : HistoricoDePedidosViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_historico__de_pedidos, container, false)
+    }
+
+    @SuppressLint("RestrictedApi")
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.historico_pedidos_menu,menu)
+
+        /* Para tornar o icone do menu visivel. Solução proposta por: Mena
+        * em https://stackoverflow.com/questions/55826607/actionbar-menus-item-icons-not-shown-properly-upon-rtl */
+        if (menu is MenuBuilder) { //To display icon on overflow menu
+            menu.setOptionalIconsVisible(true)
+        }
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.dialogLegendas -> {
+                findNavController().navigate(R.id.action_historicoDePedidosFragment_to_dialogLegendas)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onResume() {
@@ -31,26 +54,5 @@ class HistoricoDePedidosFragment: Fragment(){
                 recyclerViewPedidos.adapter = AdapterPedidos(pedidos)
             }
         })
-
-
-        /*val listaMokada = listOf<pedido>(
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null),
-            pedido(1,"2","3","mau","4","5","6",null)
-        )
-        recyclerViewPedidos.adapter = AdapterPedidos(listaMokada)*/
     }
 }

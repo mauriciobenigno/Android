@@ -1,5 +1,7 @@
 package br.com.mauriciobenigno.maxapp.commons
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.models.Pedido
 import org.jetbrains.anko.backgroundColor
+import org.jetbrains.anko.backgroundResource
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -64,12 +67,11 @@ class AdapterPedidos(val dataSet: List<Pedido>) : RecyclerView.Adapter<AdapterPe
         * Compara se o dia atual é o mesmo do pedido, caso seja, será exibido o
         * horario, caso contrario, será exibido a data*/
         var date = SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ssz").parse(pedidoAtual.data)
-        if(SimpleDateFormat("dd MMM").format(date)==SimpleDateFormat("dd MMM").format(Date())){
+        if(SimpleDateFormat("dd MMM").format(date)==SimpleDateFormat("dd MMM").format(Date()))
             holder.data.text = SimpleDateFormat("HH:mm").format(date)
-        }
-        else{
+
+        else
             holder.data.text = SimpleDateFormat("dd MMM").format(date)
-        }
 
         /* Critica*/
         pedidoAtual.critica?.let {
@@ -102,57 +104,29 @@ class AdapterPedidos(val dataSet: List<Pedido>) : RecyclerView.Adapter<AdapterPe
             }
             holder.imagemLegenda.visibility = View.VISIBLE
         }
-        /* Background da imagem baseado no status*/
-        /*holder.imagemTipoPedido.background = when(pedidoAtual.status){
-            "Pendente" -> R.color.cor_status_pendente
-            "Em processamento" -> R.color.cor_status_em_processamento
-            "Recusado" -> R.color.cor_status_recusado
-            "Bloqueado" -> R.color.cor_status_bloqueado
-            "Liberado" -> R.color.cor_status_liberado
-            "Montado" -> R.color.cor_status_montado
-            "Faturado" -> R.color.cor_status_faturado
-            "Cancelado" -> R.color.cor_status_cancelado
-            "Em orçamento" -> R.color.cor_status_em_orcamento
-            else -> R.color.cor_status_liberado
-        })*/
 
-        when(pedidoAtual.status){
-            "Pendente" ->{
-                holder.textoTipoPedido.text = pedidoAtual.tipo[0].toString()
-                holder.textoTipoPedido.backgroundColor = R.color.cor_status_pendente
-                holder.textoTipoPedido.visibility = View.VISIBLE
-            }
-            /*"Em processamento" ->{
-                holder.imagemTipoPedido.setImageResource(R.drawable.ic_maxima_em_processamento)
-                holder.imagemTipoPedido.backgroundColor = R.color.cor_status_cancelado
-                holder.imagemTipoPedido.visibility = View.VISIBLE
-            }*/
-            "Recusado" -> R.color.cor_status_recusado
-            "Bloqueado" -> R.color.cor_status_bloqueado
-            "Liberado" -> R.color.cor_status_liberado
-            "Montado" -> R.color.cor_status_montado
-            "Faturado" -> R.color.cor_status_faturado
-            "Cancelado" -> R.color.cor_status_cancelado
-            "Em orçamento" -> R.color.cor_status_em_orcamento
-            else -> {
-                holder.textoTipoPedido.text = pedidoAtual.tipo[0].toString()
-                //holder.textoTipoPedido.backgroundColor = R.color.cor_status_pendente
-                holder.textoTipoPedido.backgroundColor = R.color.cor_status_liberado
-                holder.textoTipoPedido.visibility = View.VISIBLE
-                /*AjustaImagemPedido(true,R.color.cor_status_pendente)*/
-            }
+        /* Status dos Pedidos*/
+        if(pedidoAtual.status.toLowerCase().equals("em processamento")) {
+            holder.imagemTipoPedido.setImageResource(R.drawable.ic_maxima_em_processamento)
+            holder.imagemTipoPedido.backgroundResource = R.color.cor_status_em_processamento
+            holder.imagemTipoPedido.visibility = View.VISIBLE
         }
-
-    }
-
-    fun AjustaImagemPedido(tipo: Boolean ,cor: Int){
-        /* Tipo 0 - Texto, Tipo 1 - Imagem */
-        if(tipo){
-
-        }
-        else
-        {
-
+        else {
+            holder.textoTipoPedido.text = pedidoAtual.tipo[0].toString()
+            holder.textoTipoPedido.visibility = View.VISIBLE
+            when(pedidoAtual.status.toLowerCase()){
+                "pendente" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_pendente
+                "recusado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_recusado
+                "bloqueado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_bloqueado
+                "liberado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_liberado
+                "montado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_montado
+                "faturado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_faturado
+                "cancelado" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_cancelado
+                "em orçamento" -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_em_orcamento
+                /* Na documentação não especifica a cor do produto processado, nesse caso pra ter diferenciação
+                * entre processados e pendentes na api de testes, estou colocando a mesma cor de liberado*/
+                else -> holder.textoTipoPedido.backgroundResource = R.color.cor_status_liberado
+            }
         }
 
     }

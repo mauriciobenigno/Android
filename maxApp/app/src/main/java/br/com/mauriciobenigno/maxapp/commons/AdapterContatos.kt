@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.mauriciobenigno.maxapp.R
 import br.com.mauriciobenigno.maxapp.models.Contato
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class AdapterContatos(val dataSet: List<Contato>) : RecyclerView.Adapter<AdapterContatos.ViewHolder>() {
@@ -44,9 +46,14 @@ class AdapterContatos(val dataSet: List<Contato>) : RecyclerView.Adapter<Adapter
         //holder.textoHobbie.text = contatoAtual?.
         holder.textoEmail.text = contatoAtual?.e_mail
         /* Formatando data de nascimento*/
-        holder.textoNascimento.text = "21/11/1994"
-        holder.textoNascConjugue.text = "21/11/1994"
-
+        contatoAtual.data_nascimento?.let {
+            var date = SimpleDateFormat("yyyy-MM-dd").parse(contatoAtual.data_nascimento)
+            holder.textoNascimento.text = SimpleDateFormat("dd/MM/YYYY").format(date)
+        }
+        contatoAtual.dataNascimentoConjuge?.let {
+            var date = SimpleDateFormat("yyyy-MM-dd").parse(contatoAtual.dataNascimentoConjuge)
+            holder.textoNascConjugue.text = SimpleDateFormat("dd/MM/YYYY").format(date)
+        }
         holder.textoTime.text = contatoAtual.time
     }
 

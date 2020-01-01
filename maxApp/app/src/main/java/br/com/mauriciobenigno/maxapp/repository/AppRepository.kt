@@ -30,8 +30,7 @@ class AppRepository(val context: Context) {
             override fun onResponse(call: Call<TempCliente>, response: Response<TempCliente>) {
                 if (response.code() == 200)
                 {
-                    Toast.makeText(context,"Dados cliente atualizados!",
-                        Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(context,"Dados cliente atualizados!", Toast.LENGTH_SHORT).show()
                     val resultado = response.body()
                     resultado?.let { temp ->
                         doAsync {
@@ -53,8 +52,7 @@ class AppRepository(val context: Context) {
             }
 
             override fun onResponse(call: Call<TempPedidos>, response: Response<TempPedidos>) {
-                Toast.makeText(context,"Histórico de pedidos atualizado!",
-                    Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context,"Histórico de pedidos atualizado!", Toast.LENGTH_SHORT).show()
                 if (response.code() == 200)
                 {
                     val resultado = response.body()
